@@ -15,7 +15,7 @@ const objets = [
     { fichier: `./img/gelanoe.png`, nom: "Dofus" },
     { fichier: `./img/gishu-3eye-catch.jpg`, nom: "Sekiro" },
     { fichier: `./img/jetpack.png`, nom: "GTA" },
-    { fichier: `./img/keysword.png`, nom: "Kingdom Hearts" },
+    { fichier: `./img/Keysword.png`, nom: "Kingdom Hearts" },
     { fichier: `./img/kratos-blades-of-chaos.png`, nom: "God of War" },
     { fichier: `./img/kunai.png`, nom: "Naruto" },
     { fichier : `./img/laserGun.png`, nom : "Black Ops 2"},
