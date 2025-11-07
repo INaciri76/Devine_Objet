@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devine l'objet</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="jeu">
+    <h1>🎮 Devine d'où vient l'objet</h1>
+
+    <div id="game">
+      <div id="image-container">
+        <img id="object-image" src="" alt="Objet mystère">
+      </div>
+
+      <p id="message">Appuie sur <strong>Démarrer</strong> pour jouer.</p>
+
+      <input type="text" id="guess" placeholder="Ta réponse..." disabled>
+      <button id="submit" disabled>Valider</button>
+      <button id="skip" disabled>Passer</button>
+
+      <p>Score : <span id="score">0</span></p>
+      <p>Objet : <span id="progress">0 / 14</span></p>
+    </div>
+
+    <div id="controls">
+      <button id="start">Démarrer</button>
+      <button id="restart">Recommencer</button>
+    </div>
+
+    <div id="highscores">
+      <h2>🏆 Meilleurs scores</h2>
+      <ul id="score-list"></ul>
+    </div>
+  </div>
+
+
+    <script src="./script.js"></script><!-- Le fichier script.js contiendra la logique du jeu -->
+</body>
+</html>
