@@ -8,7 +8,7 @@ const objets = [
     { fichier: `./img/bellAnimalCrossing.png`, nom: "Animal Crossing" },
     { fichier: `./img/Boost_full.png`, nom: "Rocket League" },
     { fichier: `./img/casqueSkyrim.jpg`, nom: "Skyrim" },
-    { fichier: `./img/clashofclan.jpg`, nom: "Clash of clan" },
+    { fichier: `./img/clashofclan.png`, nom: "Clash of clan" },
     { fichier: `./img/couteauLancer.png`, nom: "Black Ops 2" },
     { fichier: `./img/dragonball.png`, nom: "Dragon Ball" },
     { fichier: `./img/energySwordHalo.png`, nom: "Halo" },
@@ -20,9 +20,9 @@ const objets = [
     { fichier: `./img/kratos-blades-of-chaos.png`, nom: "God of War" },
     { fichier: `./img/kunai.png`, nom: "Naruto" },
     { fichier: `./img/lama.png`, nom: "Fortnite" },
-    { fichier : `./img/laserGun.png`, nom : "Call of duty"},
+    { fichier: `./img/laserGun.png`, nom: "Call of duty" },
     { fichier: `./img/LOLConsumable.png`, nom: "League of Legends" },
-    { fichier: `./img/Luffy.png`, nom : "One piece"},
+    { fichier: `./img/Luffy.png`, nom: "One piece" },
     { fichier: `./img/medkitFortnite.png`, nom: "Fortnite" },
     { fichier: `./img/Mettaton.png`, nom: "Undertale" },
     { fichier: `./img/MinecraftEpee.png`, nom: "Minecraft" },
@@ -36,7 +36,9 @@ const objets = [
     { fichier: `./img/sabreLaser.png`, nom: "Star Wars" },
     { fichier: `./img/smashBros.png`, nom: "Smash Bros" },
     { fichier: `./img/SonicBoots.png`, nom: "Sonic" },
-    { fichier: `./img/SplatoonWeapon.png`, nom: "Splatoon" },
+    { fichier: `./img/Spike.png`, nom: "Valorant" },
+    { fichier: `./img/splatoonWeapon.png`, nom: "Splatoon" },
+    { fichier: `./img/Splintercell.png`, nom: "Splintercell" },
 ];
 
 // === Sélection des éléments HTML ===
@@ -166,7 +168,7 @@ function demarrerPartie() {
     indexActuel = 0;
     scoreAffichage.textContent = score;
     genererObjets();
-        // Affiche l'image
+    // Affiche l'image
     document.getElementById("image-container").style.display = "flex";
     afficherObjet();
     afficherMessage("🎮 Partie commencée !");
