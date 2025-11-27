@@ -8,6 +8,7 @@ const objets = [
     { fichier: `./img/bellAnimalCrossing.png`, nom: "Animal Crossing" },
     { fichier: `./img/Boost_full.png`, nom: "Rocket League" },
     { fichier: `./img/casqueSkyrim.jpg`, nom: "Skyrim" },
+    { fichier: `./img/clashofclan.jpg`, nom: "Clash of clan" },
     { fichier: `./img/couteauLancer.png`, nom: "Black Ops 2" },
     { fichier: `./img/dragonball.png`, nom: "Dragon Ball" },
     { fichier: `./img/energySwordHalo.png`, nom: "Halo" },
@@ -18,8 +19,10 @@ const objets = [
     { fichier: `./img/Keysword.png`, nom: "Kingdom Hearts" },
     { fichier: `./img/kratos-blades-of-chaos.png`, nom: "God of War" },
     { fichier: `./img/kunai.png`, nom: "Naruto" },
+    { fichier: `./img/lama.png`, nom: "Fortnite" },
     { fichier : `./img/laserGun.png`, nom : "Call of duty"},
     { fichier: `./img/LOLConsumable.png`, nom: "League of Legends" },
+    { fichier: `./img/Luffy.png`, nom : "One piece"},
     { fichier: `./img/medkitFortnite.png`, nom: "Fortnite" },
     { fichier: `./img/Mettaton.png`, nom: "Undertale" },
     { fichier: `./img/MinecraftEpee.png`, nom: "Minecraft" },
@@ -27,8 +30,7 @@ const objets = [
     { fichier: `./img/Mr._Cupcake.png`, nom: "FNAF" },
     { fichier: `./img/Ocarina_du_Temps_oot.png`, nom: "Zelda" },
     { fichier: `./img/overcookedObject.png`, nom: "Overcooked" },
-    { fichier: `./img/Poke_Ball.png`, nom: "Pokémon" },
-    { fichier: `./img/pokedex.png`, nom: "Pokémon" },
+    { fichier: `./img/Poke_Ball.png`, nom: "Pokemon" },
     { fichier: `./img/portalgunrendernew1.png`, nom: "Portal" },
     { fichier: `./img/residentevil.png`, nom: "Resident Evil" },
     { fichier: `./img/sabreLaser.png`, nom: "Star Wars" },
@@ -69,7 +71,7 @@ function afficherMessage(txt) {
 
 // === Démarrer le minuteur 50s ===
 function demarrerMinuteur() {
-    tempsRestant = 50;
+    tempsRestant = 60;
     afficherMessage(`⏳ Temps restant : ${tempsRestant}s`);
     minuteur = setInterval(() => {
         tempsRestant--;
@@ -108,9 +110,9 @@ function verifierReponse() {
     const reponse = champReponse.value.trim();
     const correct = objetsSelectionnes[indexActuel].nom;
 
-    // Normaliser Unicode (accents, apostrophes spéciales, etc.)
-    const repNorm = reponse.normalize("NFC");
-    const corNorm = correct.normalize("NFC");
+    // Normalisation Unicode (accents, apostrophes, etc.)
+    const repNorm = reponse.normalize("NFC").toLowerCase();
+    const corNorm = correct.normalize("NFC").toLowerCase();
 
     if (repNorm.includes(corNorm) || corNorm.includes(repNorm)) {
         score += 10;
@@ -122,7 +124,6 @@ function verifierReponse() {
         afficherMessage("❌ Mauvaise réponse !");
     }
 }
-
 // === Passer à l’objet suivant ===
 function passerObjet() {
     indexActuel++;
