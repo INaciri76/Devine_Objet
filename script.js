@@ -18,7 +18,7 @@ const objets = [
     { fichier: `./img/Keysword.png`, nom: "Kingdom Hearts" },
     { fichier: `./img/kratos-blades-of-chaos.png`, nom: "God of War" },
     { fichier: `./img/kunai.png`, nom: "Naruto" },
-    { fichier : `./img/laserGun.pg.png`, nom : "Black Ops 2"},
+    { fichier : `./img/laserGun.png`, nom : "Call of duty"},
     { fichier: `./img/LOLConsumable.png`, nom: "League of Legends" },
     { fichier: `./img/medkitFortnite.png`, nom: "Fortnite" },
     { fichier: `./img/Mettaton.png`, nom: "Undertale" },
@@ -30,7 +30,7 @@ const objets = [
     { fichier: `./img/Poke_Ball.png`, nom: "Pokémon" },
     { fichier: `./img/pokedex.png`, nom: "Pokémon" },
     { fichier: `./img/portalgunrendernew1.png`, nom: "Portal" },
-    { fichier: `./img/resident evil.png`, nom: "Resident Evil" },
+    { fichier: `./img/residentevil.png`, nom: "Resident Evil" },
     { fichier: `./img/sabreLaser.png`, nom: "Star Wars" },
     { fichier: `./img/smashBros.png`, nom: "Smash Bros" },
     { fichier: `./img/SonicBoots.png`, nom: "Sonic" },
@@ -105,10 +105,14 @@ function afficherObjet() {
 
 // === Vérifier la réponse du joueur ===
 function verifierReponse() {
-    const reponse = champReponse.value.trim().toLowerCase();
-    const correct = objetsSelectionnes[indexActuel].nom.toLowerCase();
+    const reponse = champReponse.value.trim();
+    const correct = objetsSelectionnes[indexActuel].nom;
 
-    if (reponse.includes(correct) || correct.includes(reponse)) {
+    // Normaliser Unicode (accents, apostrophes spéciales, etc.)
+    const repNorm = reponse.normalize("NFC");
+    const corNorm = correct.normalize("NFC");
+
+    if (repNorm.includes(corNorm) || corNorm.includes(repNorm)) {
         score += 10;
         scoreAffichage.textContent = score;
         afficherMessage("✅ Bonne réponse !");
