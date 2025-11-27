@@ -36,7 +36,7 @@ const objets = [
     { fichier: `./img/sabreLaser.png`, nom: "Star Wars" },
     { fichier: `./img/smashBros.png`, nom: "Smash Bros" },
     { fichier: `./img/SonicBoots.png`, nom: "Sonic" },
-    { fichier: `./img/Spike.png`, nom: "Valorant" },
+    { fichier: `./img/spike.png`, nom: "Valorant" },
     { fichier: `./img/splatoonWeapon.png`, nom: "Splatoon" },
     { fichier: `./img/Splintercell.png`, nom: "Splintercell" },
 ];
